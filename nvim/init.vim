@@ -41,7 +41,7 @@ nnoremap <Leader>d :NERDTreeFind<CR>
 nnoremap <Leader>f :Files<CR> 
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
-" nnoremap <Leader>a :Ag<CR> 
+nnoremap <Leader>a :Ag<CR> 
 
 
 nnoremap <C-h> <C-w><C-h>

@@ -4,8 +4,10 @@
 3. ranger
 4. fcitx
 5. zsh
+6. tmux 
+7. p10k
+8. fzf 
+9. zim 
 
-
-nvim 需要在 .zshrc中配置 nvim 的配置文件变量
-` MYNVIMRC=~/.config/nvim/init.vim`
+cron.sh 定时执行文件拷贝并上传任务
 
