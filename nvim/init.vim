@@ -10,13 +10,14 @@ set cursorline
 set backspace=2
 set nrformats=
 set autoindent
-set scrolloff=5
+set scrolloff=15
 " autocmd vimenter * NERDTree
 
 let mapleader=','
 noremap = nzz
 noremap - Nzz
 inoremap jj <Esc>`^
+
 
 " map s :w<CR>
 map Q :q<CR>
@@ -73,6 +74,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
 Plug 'neoclide/coc.nvim',{'branch':'release'}
+Plug 'junegunn/vim-peekaboo'
 call plug#end()
 
 " 设置 git 状态刷新时间 毫秒
@@ -80,6 +82,26 @@ set updatetime=100
 color snazzy
 
 " === coc
+" 延迟500ms后启动coc
+let g:coc_start_at_startup=0
+function! CocTimerStart(timer)
+    exec "CocStart"
+endfunction
+call timer_start(500,'CocTimerStart',{'repeat':1})
+" 当文件大于 0.5 M 时禁用coc
+let g:trigger_size = 0.5 * 1048576
+augroup hugefile
+  autocmd!
+  autocmd BufReadPre *
+        \ let size = getfsize(expand('<afile>')) |
+        \ if (size > g:trigger_size) || (size == -2) |
+        \   echohl WarningMsg | echomsg 'WARNING: altering options for this huge file!' | echohl None |
+        \   exec 'CocDisable' |
+        \ else |
+        \   exec 'CocEnable' |
+        \ endif |
+        \ unlet size
+augroup END
 let g:coc_global_extensions = [
 	\ 'coc-json',
 	\ 'coc-explorer',
@@ -89,9 +111,7 @@ let g:coc_global_extensions = [
 	\ 'coc-yaml',
 	\ 'coc-word',
 	\ 'coc-vimlsp',
-	\ 'coc-translator',
 	\ 'coc-toml',
-	\ 'coc-rainbow-fart',
 	\ 'coc-html',
 	\ 'coc-highlight',
 	\ 'coc-gitignore',
@@ -101,6 +121,11 @@ let g:coc_global_extensions = [
 	\ 'coc-css',
 	\ 'coc-phpls',
 	\ 'coc-prettier',
+	\ 'coc-yank',
+	\ 'coc-pairs',
+	\ 'coc-emmet',
+	\ 'coc-sql',
+	\ 'coc-lists'
 	\ ]
 set hidden 
 
@@ -131,7 +156,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <space>p  :<C-u>CocList -A --normal yank<cr>
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)

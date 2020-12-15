@@ -1,4 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -144,7 +143,8 @@ alias r="ranger"
 alias sk="sudo screenkey"
 alias kill="sudo kill"
 alias pkill="sudo pkill"
-alias cat="ccat"
+# alias cat="ccat"
+alias cat="bat"
 alias vim="nvim.appimage"
 alias vi="vim"
 alias fd="fdfind"
@@ -154,8 +154,6 @@ eval "$(thefuck --alias)"
 export XMODIFIERS="@im=ibus"   
 export GTK_IM_MODULE="ibus"     
 export QT_IM_MODULE="ibus"
-
-# export FZF_COMPLETION_TRIGGER='\'
 
 export GOPATH=/home/caoayu/go
 export GOROOT=/usr/local/go
@@ -177,14 +175,14 @@ export PATH=$PATH:$GOROOT:$GOPATH:$GOROOT:$GOBIN:$GOPROXY:$NODE:$GOTOOLS:$EDITOR
 
 # fzf setting
 
-export FZF_DEFAULT_OPTS='--bind ctrl-e:down,ctrl-u:up --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || ccat {}) 2> /dev/null | head -500"'
-
+export FZF_DEFAULT_OPTS='--bind ctrl-e:down,ctrl-u:up --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (cat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500"'
 #export FZF_DEFAULT_COMMAND='ag --hidden --follow --exclude .git -g ""'
-export FZF_DEFAULT_COMMAND='fd'
+export FZF_DEFAULT_COMMAND='fdfind --type f'
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_TMUX=1
 export FZF_TMUX_HEIGHT='80%'
-export fzf_preview_cmd='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
+export fzf_preview_cmd='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (cat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
+#export fzf_preview_cmd='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --theme={} --color=always{} || highlight -O ansi -l {} ||  bat {}) 2> /dev/null | head -500'
 # Options to fzf command
 export FZF_COMPLETION_OPTS='+c -x'
 
@@ -193,11 +191,11 @@ export FZF_COMPLETION_OPTS='+c -x'
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
+ fdfind --hidden --follow --exclude ".git" . "$1"
 }
 
-# Use fd to generate the list for directory completion
+ # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
+ fdfind --type d --hidden --follow --exclude ".git" . "$1"
 }
 #

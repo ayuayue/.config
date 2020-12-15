@@ -8,6 +8,7 @@
 7. p10k
 8. fzf 
 9. zim 
+10. my software list 
 
 cron.sh 定时执行文件拷贝并上传任务
 
