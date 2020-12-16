@@ -19,5 +19,6 @@ apt-mark showmanual >> ./software.txt
 
 
 git add .
+git status
 git commit -m "`date '+%Y%m%d-%H:%M:%S'`"
 git push 
