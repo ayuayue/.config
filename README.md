@@ -10,5 +10,5 @@
 9. zim 
 10. my software list 
 
-cron.sh 定时执行文件拷贝并上传任务
+cron.sh 自动执行文件拷贝并上传任务
 

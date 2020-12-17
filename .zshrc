@@ -129,14 +129,14 @@ bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
 alias sudo="sudo env PATH=$PATH"
-alias cp="cp"
-alias mv="mv"
+alias cp="sudo cp"
+alias mv="sudo mv"
 alias chown="sudo chown"
 alias chmod="sudo chmod"
 alias ln="sudo ln"
 alias apt="sudo apt"
 alias service="sudo service"
-alias mkdir="mkdir"
+alias mkdir="sudo mkdir"
 alias vim="vim"
 alias editor="sudo deepin-editor"
 alias r="ranger"
@@ -144,19 +144,24 @@ alias sk="sudo screenkey"
 alias kill="sudo kill"
 alias pkill="sudo pkill"
 # alias cat="ccat"
-alias cat="bat"
+alias cat="sudo bat"
 alias vim="nvim.appimage"
 alias vi="vim"
 alias fd="fdfind"
 
+# unalias g
 eval "$(thefuck --alias)"
 
 export XMODIFIERS="@im=ibus"   
 export GTK_IM_MODULE="ibus"     
 export QT_IM_MODULE="ibus"
 
+# ===== set g environment variables =====
+export GOROOT="${HOME}/.g/go"
+export PATH="${HOME}/bin:${HOME}/.g/go/bin:$PATH"
+export G_MIRROR=https://golang.google.cn/dl/
 export GOPATH=/home/caoayu/go
-export GOROOT=/usr/local/go
+# export GOROOT=/usr/local/go
 export GOBIN=$GOROOT/bin
 export GOPROXY=https://goproxy.cn
 export NODE=/usr/local/node/bin
