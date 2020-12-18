@@ -1,3 +1,4 @@
+set nocompatible
 syntax on
 
 set number 
@@ -55,6 +56,8 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=[
 	\ '\.git$','\.hg$','\.svn$','\.pyc$','\.swp$',
 	\ ]
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
 
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
@@ -75,6 +78,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'junegunn/vim-peekaboo'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 " 设置 git 状态刷新时间 毫秒
