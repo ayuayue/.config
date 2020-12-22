@@ -148,6 +148,7 @@ alias cat="sudo bat"
 alias vim="nvim.appimage"
 alias vi="vim"
 alias fd="fdfind"
+alias fm="dde-file-manager"
 
 # unalias g
 eval "$(thefuck --alias)"

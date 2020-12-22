@@ -1,4 +1,4 @@
-### My Some Linux Config
+### Some of my Linux configuration
 1. alacritty
 2. nvim
 3. ranger
@@ -11,4 +11,7 @@
 10. my software list 
 
 cron.sh 自动执行文件拷贝并上传任务
+定时任务 crontab -e
+```bash 
+0 * * * * cd /home/**/.config/ && zsh ./cron.sh # 每天十点
 
