@@ -168,10 +168,10 @@ export GOPROXY=https://goproxy.cn
 export NODE=/usr/local/node/bin
 export GOTOOLS=$GOBIN/bin
 export EDITOR=vim
-export YOUGET=/usr/local/you-get
 export MYVIMRC=/home/caoayu/.vim/vimrc
 export MYNVIMRC=/home/caoayu/.config/nvim/init.vim
-export PATH=$PATH:$GOROOT:$GOPATH:$GOROOT:$GOBIN:$GOPROXY:$NODE:$GOTOOLS:$EDITOR:$YOUGET:$MYVIMRC:$MYNVIMRC
+export YOUGET=/usr/local/you-get/
+export PATH=$PATH:$GOROOT:$GOPATH:$GOROOT:$GOBIN:$GOPROXY:$NODE:$GOTOOLS:$EDITOR:$MYNVIMRC:$YOUGET
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
