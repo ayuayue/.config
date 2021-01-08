@@ -43,8 +43,13 @@ nnoremap <Leader>d :NERDTreeFind<CR>
 nnoremap <Leader>f :Files<CR> 
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
-nnoremap <Leader>a :Ag<CR> 
+" nnoremap <Leader>a :Ag<CR> 
 
+" coc picgo
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" end coc picgo
 
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-l> <C-w><C-l>
@@ -58,13 +63,22 @@ let NERDTreeIgnore=[
 	\ ]
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
+" 高亮数学公式
+let g:vim_markdown_math = 1
+" markdown 预览
+let g:mkdp_path_to_chrome = "chrome"
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_open = 1
+nmap <silent> <F8> <Plug>MarkdownPreview
+imap <silent> <F8> <Plug>MarkdownPreview
+nmap <silent> <F9> <Plug>StopMarkdownPreview
+imap <silent> <F9> <Plug>StopMarkdownPreview
 
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
 Plug 'connorholyday/vim-snazzy'
-Plug 'iamcco/markdown-preview.vim',{'do':{ ->mkdp#util#install()},'for':['markdown','vim-plug']}
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf',{ 'dir' : '~/.fzf','do': './install --all'}
@@ -79,6 +93,8 @@ Plug 'junegunn/gv.vim'
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'junegunn/vim-peekaboo'
 Plug '907th/vim-auto-save'
+Plug 'godlygeek/tabular'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 
 " 设置 git 状态刷新时间 毫秒
@@ -107,9 +123,7 @@ augroup hugefile
         \ unlet size
 augroup END
 let g:coc_global_extensions = [
-	\ 'coc-json',
 	\ 'coc-explorer',
-	\ 'coc-vetur',
 	\ 'coc-tsserver',
 	\ 'coc-marketplace',
 	\ 'coc-yaml',
@@ -120,16 +134,14 @@ let g:coc_global_extensions = [
 	\ 'coc-highlight',
 	\ 'coc-gitignore',
 	\ 'coc-fzf-preview',
-	\ 'coc-format-json',
-	\ 'coc-docker',
 	\ 'coc-css',
 	\ 'coc-phpls',
 	\ 'coc-prettier',
 	\ 'coc-yank',
 	\ 'coc-pairs',
-	\ 'coc-emmet',
 	\ 'coc-sql',
-	\ 'coc-lists'
+	\ 'coc-lists',
+	\ 'coc-picgo'
 	\ ]
 set hidden 
 

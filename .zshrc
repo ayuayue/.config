@@ -144,34 +144,39 @@ alias sk="sudo screenkey"
 alias kill="sudo kill"
 alias pkill="sudo pkill"
 # alias cat="ccat"
-alias cat="sudo bat"
+#alias cat="sudo bat"
 alias vim="nvim.appimage"
 alias vi="vim"
 alias fd="fdfind"
 alias fm="dde-file-manager"
-
+alias share="python3 -m http.server"
 # unalias g
 eval "$(thefuck --alias)"
 
-export XMODIFIERS="@im=ibus"   
-export GTK_IM_MODULE="ibus"     
-export QT_IM_MODULE="ibus"
+#unset https_proxy
+#unset http_proxy
+#unset ALL_PROXY
+
+# export XMODIFIERS="@im=ibus"   
+# export GTK_IM_MODULE="ibus"     
+# export QT_IM_MODULE="ibus"
 
 # ===== set g environment variables =====
 export GOROOT="${HOME}/.g/go"
 export PATH="${HOME}/bin:${HOME}/.g/go/bin:$PATH"
 export G_MIRROR=https://golang.google.cn/dl/
-export GOPATH=/home/caoayu/go
+export GOPATH=${HOME}/caoayu/go
 # export GOROOT=/usr/local/go
 export GOBIN=$GOROOT/bin
 export GOPROXY=https://goproxy.cn
 export NODE=/usr/local/node/bin
 export GOTOOLS=$GOBIN/bin
 export EDITOR=vim
-export MYVIMRC=/home/caoayu/.vim/vimrc
-export MYNVIMRC=/home/caoayu/.config/nvim/init.vim
+export MYVIMRC=${HOME}/.vim/vimrc
+export MYNVIMRC=${HOME}/.config/nvim/init.vim
 export YOUGET=/usr/local/you-get/
-export PATH=$PATH:$GOROOT:$GOPATH:$GOROOT:$GOBIN:$GOPROXY:$NODE:$GOTOOLS:$EDITOR:$MYNVIMRC:$YOUGET
+export BREW=/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:$GOROOT:$GOPATH:$GOROOT:$GOBIN:$GOPROXY:$NODE:$GOTOOLS:$EDITOR:$MYNVIMRC:$YOUGET:$BREW
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -205,3 +210,4 @@ _fzf_compgen_dir() {
  fdfind --type d --hidden --follow --exclude ".git" . "$1"
 }
 #
+fortune | cowsay

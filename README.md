@@ -12,6 +12,8 @@
 
 cron.sh 自动执行文件拷贝并上传任务
 定时任务 crontab -e
-```bash 
-0 * * * * cd /home/**/.config/ && zsh ./cron.sh # 每天十点
+`**`代指当前用户
 
+```bash 
+0 10 * * 5 cd /home/**/.config/ && zsh ./cron.sh # 每周五十点
+```
