@@ -23,7 +23,10 @@ inoremap jj <Esc>`^
 " map s :w<CR>
 map Q :q<CR>
 map R :source $MYNVIMRC<CR>
-map <C-n> :NERDTreeToggle<CR>
+
+map <C-n> :tabnew<CR>
+nnoremap <Leader>d :Explore<CR>
+
 map <Leader>sc :set spell!<CR>
 inoremap <Leader><CR> :nohls<CR>
 nnoremap <Leader><CR> :nohls<CR>
@@ -39,7 +42,6 @@ imap <C-x><C-f> <Plug>(fzf-complete-path)
 imap <C-x><C-l> <Plug>(fzf-complete-line)
 
 nnoremap <silent><Leader>w :write<CR>
-nnoremap <Leader>d :NERDTreeFind<CR>
 nnoremap <Leader>f :Files<CR> 
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
@@ -56,11 +58,11 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k> 
 
-let NERDTreeShowHidden=1
-
-let NERDTreeIgnore=[
-	\ '\.git$','\.hg$','\.svn$','\.pyc$','\.swp$',
-	\ ]
+" let NERDTreeShowHidden=1
+" 
+" let NERDTreeIgnore=[
+" 	\ '\.git$','\.hg$','\.svn$','\.pyc$','\.swp$',
+" 	\ ]
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
 " 高亮数学公式
@@ -79,11 +81,11 @@ Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
 Plug 'connorholyday/vim-snazzy'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf',{ 'dir' : '~/.fzf','do': './install --all'}
 Plug 'junegunn/fzf.vim'
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 Plug 'fatih/vim-go',{ 'for': ['go','vim-plug'], 'tag': '*' }
 Plug 'majutsushi/tagbar'
 Plug 'lfv89/vim-interestingwords'
@@ -96,6 +98,7 @@ Plug '907th/vim-auto-save'
 Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
 Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'mg979/vim-xtabline'
 call plug#end()
 
 " 设置 git 状态刷新时间 毫秒
