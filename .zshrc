@@ -150,6 +150,8 @@ alias vi="vim"
 alias fd="fdfind"
 alias fm="dde-file-manager"
 alias share="python3 -m http.server"
+alias ding="${HOME}/Github/pierced/linux/ding --config=${HOME}/Github/pierced/linux/ding.cfg --subdomain=caoayu"
+alias lg="lazygit"
 # unalias g
 eval "$(thefuck --alias)"
 
@@ -177,7 +179,7 @@ export MYNVIMRC=${HOME}/.config/nvim/init.vim
 export YOUGET=/usr/local/you-get/
 export BREW=/home/linuxbrew/.linuxbrew/bin
 export PATH=$PATH:$GOROOT:$GOPATH:$GOROOT:$GOBIN:$GOPROXY:$NODE:$GOTOOLS:$EDITOR:$MYNVIMRC:$YOUGET:$BREW
-
+export HISTTIMEFORMAT="\%F \%T`who \-u am i 2>/dev/null| awk '{print $NF}'|sed \-e 's/[()]//g'``whoami`"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

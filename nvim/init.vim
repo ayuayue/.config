@@ -29,7 +29,7 @@ inoremap <Leader><CR> :nohls<CR>
 nnoremap <Leader><CR> :nohls<CR>
 noremap <C-f> <C-f>zz
 noremap <C-u> <C-u>zz
-
+noremap <c-g> :tabe<CR>:-tabmove<CR>:term lazygit<CR>
 nmap <Leader><Tab> <Plug>(fzf-maps-n)
 xmap <Leader><Tab> <Plug>(fzf-maps-x)
 omap <Leader><Tab> <Plug>(fzf-maps-o)
@@ -66,9 +66,9 @@ let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would 
 " 高亮数学公式
 let g:vim_markdown_math = 1
 " markdown 预览
-let g:mkdp_path_to_chrome = "chrome"
-let g:mkdp_auto_start = 1
-let g:mkdp_auto_open = 1
+let g:mkdp_path_to_chrome = 'chrome'
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_open = 0
 nmap <silent> <F8> <Plug>MarkdownPreview
 imap <silent> <F8> <Plug>MarkdownPreview
 nmap <silent> <F9> <Plug>StopMarkdownPreview
@@ -94,7 +94,8 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'junegunn/vim-peekaboo'
 Plug '907th/vim-auto-save'
 Plug 'godlygeek/tabular'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
+Plug 'iamcco/mathjax-support-for-mkdp'
 call plug#end()
 
 " 设置 git 状态刷新时间 毫秒
