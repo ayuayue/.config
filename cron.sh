@@ -15,6 +15,7 @@ cp /home/caoayu/.config/zsh/fzf.zsh /home/caoayu/Desktop/code/.config//zsh/
 cp /home/caoayu/.config/nvim/init.vim /home/caoayu/Desktop/code/.config/nvim/ 
 cp /home/caoayu/.tmux.conf /home/caoayu/Desktop/code/.config/
 cp /home/caoayu/.p10k.zsh /home/caoayu/Desktop/code/.config/
+cp /home/caoayu/.pip/pip.conf /home/caoayu/Desktop/code/.config/
 apt-mark showmanual >> /home/caoayu/Desktop/code/.config/software.txt 
 
 
