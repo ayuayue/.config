@@ -1,15 +1,23 @@
 local wezterm = require 'wezterm'
+
+wezterm.on('gui-startup', function(cmd)
+    local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+    window:gui_window():maximize()
+end)
 local c = {}
+
+
+
 if wezterm.config_builder then
     c = wezterm.config_builder()
 end
 
 -- 初始大小
--- c.initial_cols = 96
--- c.initial_rows = 24
+-- c.initial_cols = 120
+-- c.initial_rows = 34
 
 -- 关闭时不进行确认
-c.window_close_confirmation = 'NeverPrompt'
+-- c.window_close_confirmation = 'NeverPrompt'
 
 -- 字体
 c.font = wezterm.font 'LXGW WenKai Mono'
@@ -26,15 +34,15 @@ materia.scrollbar_thumb = '#cccccc' -- 更明显的滚动条
 c.colors = materia
 
 -- 透明背景
-c.window_background_opacity = 1
+c.window_background_opacity = 0.95
 -- 取消 Windows 原生标题栏
 c.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 -- 滚动条尺寸为 15 ，其他方向不需要 pad
 c.window_padding = {
-    left = 0,
-    right = 15,
-    top = 0,
-    bottom = 0
+    left = 5,
+    right = 5,
+    top = 5,
+    bottom = 5
 }
 -- 启用滚动条
 c.enable_scroll_bar = true
