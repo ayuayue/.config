@@ -22,3 +22,12 @@ cron.sh 自动执行文件拷贝并上传任务
 `pip.sh` 自动备份并替换pip的配置文件
 
 `vim` 检测 `:checkhealth`
+
+
+----
+
+# windwos tool config
+
+wezterm terminal
+nushell 
+startship
