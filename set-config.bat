@@ -1,4 +1,6 @@
 @echo off
-call "%~dp0nushell\set-config.bat"
-call "%~dp0shartship\set-config.bat"
-call "%~dp0wezterm\set-config.bat"
+set "current_dir=%cd%"
+mklink "%USERPROFILE%\AppData\Roaming\nushell\env.nu" "%current_dir%\nushell\env.nu" 
+mklink "%USERPROFILE%\AppData\Roaming\nushell\config.nu" "%current_dir%\nushell\config.nu" 
+mklink "%USERPROFILE%\.config\starship.toml" "%current_dir%\starship\starship.toml" 
+mklink /D "%USERPROFILE%\.config\wezterm" "%current_dir%\wezterm" 

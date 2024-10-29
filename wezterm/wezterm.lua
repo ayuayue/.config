@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 wezterm.on('gui-startup', function(cmd)
     local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
-    window:gui_window():maximize()
+    window:gui_window():set_position(400, 100)
 end)
 local c = {}
 
@@ -13,8 +13,8 @@ if wezterm.config_builder then
 end
 
 -- 初始大小
--- c.initial_cols = 120
--- c.initial_rows = 34
+c.initial_cols = 120
+c.initial_rows = 35
 
 -- 关闭时不进行确认
 -- c.window_close_confirmation = 'NeverPrompt'
