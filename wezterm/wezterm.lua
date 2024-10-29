@@ -17,7 +17,7 @@ c.initial_cols = 120
 c.initial_rows = 35
 
 -- 关闭时不进行确认
--- c.window_close_confirmation = 'NeverPrompt'
+c.window_close_confirmation = 'NeverPrompt'
 
 -- 字体
 c.font = wezterm.font 'LXGW WenKai Mono'
