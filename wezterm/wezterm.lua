@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 wezterm.on('gui-startup', function(cmd)
     local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
-    window:gui_window():maximize()
+    window:gui_window():set_position(400, 100)
 end)
 local c = {}
 
@@ -13,15 +13,15 @@ if wezterm.config_builder then
 end
 
 -- 初始大小
--- c.initial_cols = 120
--- c.initial_rows = 34
+c.initial_cols = 120
+c.initial_rows = 35
 
 -- 关闭时不进行确认
--- c.window_close_confirmation = 'NeverPrompt'
+c.window_close_confirmation = 'NeverPrompt'
 
 -- 字体
 c.font = wezterm.font 'LXGW WenKai Mono'
-c.font_size = 14
+c.font_size = 13
 c.line_height = 0.9
 
 c.adjust_window_size_when_changing_font_size = false
@@ -53,7 +53,7 @@ c.default_prog = {'nu.exe'}
 -- 启动菜单的一些启动项
 c.launch_menu = {{
     label = 'pwsh',
-    args = {'pwsh.exe --nologo'}
+    args = {'pwsh.exe',"--nologo"}
 }, {
     label = 'PowerShell',
     args = {'C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'}

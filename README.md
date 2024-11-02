@@ -31,3 +31,7 @@ cron.sh 自动执行文件拷贝并上传任务
 wezterm terminal
 nushell 
 startship
+
+设置配置文件链接
+
+`sudo ./set-config.bat`
