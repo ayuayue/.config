@@ -102,3 +102,5 @@ $env.NU_PLUGIN_DIRS = [
 
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
+let-env HTTP_PROXY = "http://127.0.0.1:7890"
+let-env HTTPS_PROXY = "http://127.0.0.1:7890"
