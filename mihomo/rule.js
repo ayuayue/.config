@@ -4,6 +4,7 @@ function main(config) {
       "DOMAIN-SUFFIX,fastadmin.net,DIRECT",
       "DOMAIN-SUFFIX,oaifree.com,DIRECT",
       "DOMAIN-SUFFIX,cobazaar.com,DIRECT",
+      "DOMAIN-KEYWORD,edu.cn,DIRECT",
       "IP-CIDR,61.51.111.0/24,DIRECT",
       "IP-CIDR,62.234.123.0/24,DIRECT",
       "IP-CIDR,114.117.130.0/24,DIRECT",
