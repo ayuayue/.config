@@ -10,9 +10,9 @@ function main(config) {
       "IP-CIDR,114.117.130.0/24,DIRECT",
 
       "DOMAIN-SUFFIX,bing.com,PROXY",
-      "PROCESS-NAME,Doubao.exe,PROXY",
-      "PROCESS-NAME,zen.exe,PROXY",
-      "PROCESS-NAME,msedge.exe,PROXY",
+      // "PROCESS-NAME,Doubao.exe,PROXY",
+      // "PROCESS-NAME,zen.exe,PROXY",
+      // "PROCESS-NAME,msedge.exe,PROXY",
       
       "PROCESS-NAME,ChatGPT.exe,AIGC",
       ...config["rules"],
