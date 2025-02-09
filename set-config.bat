@@ -7,3 +7,5 @@ mklink /D "%USERPROFILE%\.config\wezterm" "%current_dir%\wezterm"
 
 mklink /D "%USERPROFILE%\Documents\PowerShell" "%current_dir%\PowerShell" 
 mklink /D "%USERPROFILE%\Documents\WindowsPowerShell" "%current_dir%\PowerShell" 
+
+mklink /D "%USERPROFILE%\AppData\Roaming\yazi\config" "%current_dir%\yazi\config" 
