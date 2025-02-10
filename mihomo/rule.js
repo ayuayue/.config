@@ -10,6 +10,7 @@ function main(config) {
 
       "DOMAIN-SUFFIX,bing.com,PROXY",
       "DOMAIN-SUFFIX,github.com,PROXY",
+      "DOMAIN-SUFFIX,google.com,PROXY",
       "DOMAIN-SUFFIX,notion.so,PROXY",
       // "PROCESS-NAME,Doubao.exe,PROXY",
       // "PROCESS-NAME,zen.exe,PROXY",
