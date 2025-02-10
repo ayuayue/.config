@@ -9,6 +9,8 @@ function main(config) {
       // "IP-CIDR,114.117.130.0/24,DIRECT",
 
       "DOMAIN-SUFFIX,bing.com,PROXY",
+      "DOMAIN-SUFFIX,github.com,PROXY",
+      "DOMAIN-SUFFIX,notion.so,PROXY",
       // "PROCESS-NAME,Doubao.exe,PROXY",
       // "PROCESS-NAME,zen.exe,PROXY",
       // "PROCESS-NAME,msedge.exe,PROXY",
