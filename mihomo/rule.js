@@ -4,22 +4,26 @@ function main(config) {
     "DOMAIN-SUFFIX,fastadmin.net,DIRECT",
     "DOMAIN-SUFFIX,oaifree.com,DIRECT",
     "DOMAIN-SUFFIX,cobazaar.com,DIRECT",
+
     "DOMAIN-SUFFIX,okxpc.com,PROXY",
     "DOMAIN-SUFFIX,xctexchange.com,PROXY",
+    "DOMAIN-SUFFIX,bing.com,PROXY",
+    "DOMAIN-SUFFIX,github.com,PROXY",
+    "DOMAIN-SUFFIX,notion.so,PROXY",
+
     "DOMAIN-KEYWORD,edu.cn,DIRECT",
+
     "IP-CIDR,61.51.111.0/24,DIRECT",
     "IP-CIDR,62.234.123.0/24,DIRECT",
     "IP-CIDR,114.117.130.0/24,DIRECT",
 
-    "DOMAIN-SUFFIX,bing.com,PROXY",
+    "PROCESS-NAME,wechat.exe,DIRECT",
+    
     "PROCESS-NAME,Doubao.exe,PROXY",
-    // "PROCESS-NAME,zen.exe,PROXY",
     "PROCESS-NAME,Telegram.exe,PROXY",
     "PROCESS-NAME,Notion.exe,PROXY",
-    "PROCESS-NAME,wechat.exe,DIRECT",
-          "DOMAIN-SUFFIX,github.com,PROXY",
-    "DOMAIN-SUFFIX,notion.so,PROXY",
     "PROCESS-NAME,ChatGPT.exe,AIGC",
+
     ...config["rules"],
   ];
   return config;
