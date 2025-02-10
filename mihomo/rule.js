@@ -1,20 +1,23 @@
 function main(config) {
     config["rules"] = [
-      // "DOMAIN-SUFFIX,linux.do,DIRECT",
-      // "DOMAIN-SUFFIX,fastadmin.net,DIRECT",
-      // "DOMAIN-SUFFIX,oaifree.com,DIRECT",
-      // "DOMAIN-SUFFIX,cobazaar.com,DIRECT",
-      // "IP-CIDR,61.51.111.0/24,DIRECT",
-      // "IP-CIDR,62.234.123.0/24,DIRECT",
-      // "IP-CIDR,114.117.130.0/24,DIRECT",
 
       "DOMAIN-SUFFIX,bing.com,PROXY",
       "DOMAIN-SUFFIX,github.com,PROXY",
       "DOMAIN-SUFFIX,google.com,PROXY",
+      "DOMAIN-SUFFIX,jetbrains.com,PROXY",
+      "DOMAIN-SUFFIX,v2ex.com,PROXY",
       "DOMAIN-SUFFIX,notion.so,PROXY",
-      // "PROCESS-NAME,Doubao.exe,PROXY",
-      // "PROCESS-NAME,zen.exe,PROXY",
-      // "PROCESS-NAME,msedge.exe,PROXY",
+      "DOMAIN-SUFFIX,youtube.com,PROXY",
+      "DOMAIN-SUFFIX,tiktok.com,PROXY",
+      "DOMAIN-SUFFIX,instagram.com,PROXY",
+      "DOMAIN-SUFFIX,twitter.com,PROXY",
+      "DOMAIN-SUFFIX,facebook.com,PROXY",
+      "DOMAIN-SUFFIX,linkedin.com,PROXY",
+      "DOMAIN-SUFFIX,reddit.com,PROXY",
+      "DOMAIN-SUFFIX,discord.com,PROXY",
+      "DOMAIN-SUFFIX,x.com,PROXY",
+
+
       
       "PROCESS-NAME,ChatGPT.exe,AIGC",
       ...config["rules"],
