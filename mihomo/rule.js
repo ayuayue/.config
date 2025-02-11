@@ -1,13 +1,21 @@
 function main(config) {
-    config["rules"] = [
-      "DOMAIN-SUFFIX,linux.do,DIRECT",
-      "DOMAIN-SUFFIX,fastadmin.net,DIRECT",
-      "DOMAIN-SUFFIX,oaifree.com,DIRECT",
-      "DOMAIN-SUFFIX,cobazaar.com,DIRECT",
-      "DOMAIN-KEYWORD,edu.cn,DIRECT",
-      "IP-CIDR,61.51.111.0/24,DIRECT",
-      "IP-CIDR,62.234.123.0/24,DIRECT",
-      "IP-CIDR,114.117.130.0/24,DIRECT",
+  config["rules"] = [
+    // "DOMAIN-SUFFIX,linux.do,DIRECT",
+    "DOMAIN-SUFFIX,fastadmin.net,DIRECT",
+    "DOMAIN-SUFFIX,oaifree.com,DIRECT",
+    "DOMAIN-SUFFIX,cobazaar.com,DIRECT",
+
+    "DOMAIN-SUFFIX,okxpc.com,PROXY",
+    "DOMAIN-SUFFIX,xctexchange.com,PROXY",
+    "DOMAIN-SUFFIX,bing.com,PROXY",
+    "DOMAIN-SUFFIX,github.com,PROXY",
+    "DOMAIN-SUFFIX,notion.so,PROXY",
+
+    "DOMAIN-KEYWORD,edu.cn,DIRECT",
+
+    "IP-CIDR,61.51.111.0/24,DIRECT",
+    "IP-CIDR,62.234.123.0/24,DIRECT",
+    "IP-CIDR,114.117.130.0/24,DIRECT",
 
       "DOMAIN-SUFFIX,bing.com,PROXY",
       "DOMAIN-SUFFIX,microsoft.com,PROXY",

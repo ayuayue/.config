@@ -48,7 +48,7 @@ c.window_padding = {
 c.enable_scroll_bar = true
 
 -- 默认启动 MinGW64 / MSYS2
-c.default_prog = {'nu.exe'}
+c.default_prog = {'pwsh.exe --nologo'}
 
 -- 启动菜单的一些启动项
 c.launch_menu = {{
@@ -60,6 +60,9 @@ c.launch_menu = {{
 }, {
     label = 'CMD',
     args = {'cmd.exe'}
+}, {
+    label = 'NU',
+    args = {'nu.exe'}
 }}
 
 -- 取消所有默认的热键

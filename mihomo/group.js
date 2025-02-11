@@ -1,7 +1,7 @@
 function main(config) {
     config["proxy-groups"] = [
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png",
         "include-all": true,
         "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
         name: "PROXY",
@@ -9,7 +9,7 @@ function main(config) {
         proxies: ["AUTO", "HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png",
         "include-all": true,
         "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
         name: "AUTO",
@@ -17,25 +17,25 @@ function main(config) {
         interval: 300,
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png",
         name: "AIGC",
         type: "select",
         proxies: ["SG AUTO", "JP AUTO", "US AUTO"],
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png",
         name: "Telegram",
         type: "select",
         proxies: ["HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png",
         name: "Google",
         type: "select",
         proxies: ["HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
         "include-all": true,
         "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
         filter: "(?i)香港|Hong Kong|HK|🇭🇰",
@@ -44,7 +44,7 @@ function main(config) {
         interval: 300,
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png",
         "include-all": true,
         "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
         filter: "(?i)新加坡|Singapore|🇸🇬",
@@ -53,7 +53,7 @@ function main(config) {
         interval: 300,
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png",
         "include-all": true,
         "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
         filter: "(?i)日本|Japan|🇯🇵",
@@ -62,7 +62,7 @@ function main(config) {
         interval: 300,
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png",
         "include-all": true,
         "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
         filter: "(?i)美国|USA|🇺🇸",
@@ -71,7 +71,7 @@ function main(config) {
         interval: 300,
       },
       {
-        icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png",
+        icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png",
         "include-all": true,
         "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
         proxies: ["AUTO", "HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
@@ -84,7 +84,7 @@ function main(config) {
     }
     config["rule-providers"] = Object.assign(config["rule-providers"], {
       private: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml",
         path: "./ruleset/private.yaml",
         behavior: "domain",
         interval: 86400,
@@ -92,7 +92,7 @@ function main(config) {
         type: "http",
       },
       cn_domain: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml",
         path: "./ruleset/cn_domain.yaml",
         behavior: "domain",
         interval: 86400,
@@ -100,7 +100,7 @@ function main(config) {
         type: "http",
       },
       telegram_domain: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml",
         path: "./ruleset/telegram_domain.yaml",
         behavior: "domain",
         interval: 86400,
@@ -108,7 +108,7 @@ function main(config) {
         type: "http",
       },
       google_domain: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml",
         path: "./ruleset/google_domain.yaml",
         behavior: "domain",
         interval: 86400,
@@ -116,7 +116,7 @@ function main(config) {
         type: "http",
       },
       "geolocation-!cn": {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml",
         path: "./ruleset/geolocation-!cn.yaml",
         behavior: "domain",
         interval: 86400,
@@ -124,7 +124,7 @@ function main(config) {
         type: "http",
       },
       cn_ip: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml",
         path: "./ruleset/cn_ip.yaml",
         behavior: "ipcidr",
         interval: 86400,
@@ -132,7 +132,7 @@ function main(config) {
         type: "http",
       },
       telegram_ip: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml",
         path: "./ruleset/telegram_ip.yaml",
         behavior: "ipcidr",
         interval: 86400,
@@ -140,7 +140,7 @@ function main(config) {
         type: "http",
       },
       google_ip: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.yaml",
+        url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.yaml",
         path: "./ruleset/google_ip.yaml",
         behavior: "ipcidr",
         interval: 86400,
@@ -148,7 +148,7 @@ function main(config) {
         type: "http",
       },
       bing: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml",
+        url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml",
         path: "./ruleset/bing.yaml",
         behavior: "classical",
         interval: 86400,
@@ -156,7 +156,7 @@ function main(config) {
         type: "http",
       },
       copilot: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml",
+        url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml",
         path: "./ruleset/copilot.yaml",
         behavior: "classical",
         interval: 86400,
@@ -164,7 +164,7 @@ function main(config) {
         type: "http",
       },
       claude: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml",
+        url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml",
         path: "./ruleset/claude.yaml",
         behavior: "classical",
         interval: 86400,
@@ -172,7 +172,7 @@ function main(config) {
         type: "http",
       },
       bard: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.yaml",
+        url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.yaml",
         path: "./ruleset/bard.yaml",
         behavior: "classical",
         interval: 86400,
@@ -180,7 +180,7 @@ function main(config) {
         type: "http",
       },
       openai: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
+        url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
         path: "./ruleset/openai.yaml",
         behavior: "classical",
         interval: 86400,
@@ -188,7 +188,7 @@ function main(config) {
         type: "http",
       },
       steam: {
-        url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml",
+        url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml",
         path: "./ruleset/steam.yaml",
         behavior: "classical",
         interval: 86400,
