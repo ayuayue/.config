@@ -4,6 +4,7 @@ function main(config) {
     "DOMAIN-SUFFIX,fastadmin.net,DIRECT",
     "DOMAIN-SUFFIX,oaifree.com,DIRECT",
     "DOMAIN-SUFFIX,cobazaar.com,DIRECT",
+    "DOMAIN-SUFFIX,ipip.net,DIRECT",
 
     "DOMAIN-SUFFIX,okxpc.com,PROXY",
     "DOMAIN-SUFFIX,xctexchange.com,PROXY",
