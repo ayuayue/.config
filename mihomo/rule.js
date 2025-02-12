@@ -17,7 +17,7 @@ function main(config) {
     "IP-CIDR,62.234.123.0/24,DIRECT",
     "IP-CIDR,114.117.130.0/24,DIRECT",
 
-    "PROCESS-NAME,wechat.exe,DIRECT",
+    "PROCESS-NAME,WeChat.exe,DIRECT",
     
     "PROCESS-NAME,Doubao.exe,PROXY",
     "PROCESS-NAME,Telegram.exe,PROXY",
