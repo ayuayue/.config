@@ -2,6 +2,7 @@
 Invoke-Expression "$(vfox activate pwsh)"
 Invoke-Expression (&starship init powershell)
 
+
 function y {
     $tmp = [System.IO.Path]::GetTempFileName()
     yazi $args --cwd-file="$tmp"
