@@ -4,7 +4,6 @@ function main(config) {
     "DOMAIN-SUFFIX,fastadmin.net,DIRECT",
     "DOMAIN-SUFFIX,oaifree.com,DIRECT",
     "DOMAIN-SUFFIX,cobazaar.com,DIRECT",
-    "DOMAIN-SUFFIX,ipip.net,DIRECT",
 
     "DOMAIN-SUFFIX,okxpc.com,PROXY",
     "DOMAIN-SUFFIX,xctexchange.com,PROXY",
@@ -19,6 +18,9 @@ function main(config) {
     "IP-CIDR,114.117.130.0/24,DIRECT",
 
     "PROCESS-NAME,WeChat.exe,DIRECT",
+    "PROCESS-NAME,GameViewerServer.exe,DIRECT",
+    "PROCESS-NAME,ToDesk.exe,DIRECT",
+    "PROCESS-NAME,GameViewer.exe,DIRECT",
     
     "PROCESS-NAME,Doubao.exe,PROXY",
     "PROCESS-NAME,Telegram.exe,PROXY",
