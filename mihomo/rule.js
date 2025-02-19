@@ -21,6 +21,7 @@ function main(config) {
     "PROCESS-NAME,GameViewerServer.exe,DIRECT",
     "PROCESS-NAME,ToDesk.exe,DIRECT",
     "PROCESS-NAME,GameViewer.exe,DIRECT",
+    "PROCESS-NAME,CorpLink.exe,DIRECT",
     
     "PROCESS-NAME,Doubao.exe,PROXY",
     "PROCESS-NAME,Telegram.exe,PROXY",
