@@ -11,4 +11,4 @@ Invoke-Expression "$(vfox activate pwsh)"
 #         Set-Location -LiteralPath $cwd
 #     }
 #     Remove-Item -Path $tmp
-# }
+# }fnm env --use-on-cd | Out-String | Invoke-Expression 
