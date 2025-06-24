@@ -18,6 +18,7 @@ function overwriteRules(params) {
       // 示例1 ：使用 全局代理模式
       //"DOMAIN-SUFFIX,linux.do," + proxyName,
         "DOMAIN-SUFFIX,google.com,Google",
+        "DOMAIN-SUFFIX,bing.com,"+proxyName,
         "IP-CIDR,134.122.189.87/32,"+proxyName
       // 示例2 ：使用 自定义代理组1
       //"DOMAIN-SUFFIX,gstatic.com,自定义代理组1",
